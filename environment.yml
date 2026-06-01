@@ -1,0 +1,43 @@
+# Seq2Kd Environment Configuration
+# 
+# Installation:
+#   conda env create -f environment.yml
+#   conda activate seq2kd
+#
+# Note: PyTorch Geometric wheels need to be installed separately for CUDA 12.4:
+#   pip install torch-scatter torch-sparse torch-cluster -f https://data.pyg.org/whl/torch-2.4.0+cu124.html
+
+name: seq2kd
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+      # PyTorch (CUDA 12.4)
+      - torch==2.4.0
+      - torchaudio==2.4.0
+      - torchvision==0.19.0
+      # PyTorch Geometric
+      - torch-geometric==2.6.0
+      - torch-cluster==1.6.3
+      - torch-scatter==2.1.2
+      - torch-sparse==0.6.18
+      # ESM2 Protein Language Model
+      - fair-esm==2.0.0
+      # Data processing
+      - numpy==1.26.4
+      - pandas==2.2.3
+      - scipy==1.14.0
+      # Utilities
+      - click==8.0.4
+      - tqdm==4.66.5
+      - ruamel.yaml==0.16.12
+      # Visualization
+      - matplotlib==3.9.1
+      # Other
+      - einops==0.8.0
+      - biopython==1.84

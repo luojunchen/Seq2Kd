@@ -1,0 +1,50 @@
+# Seq2Kd Model Configuration
+# For protein-DNA binding affinity prediction
+
+name: Seq2Kd
+path: checkpoints/seq2kd
+
+# Model configuration
+model:
+  n_layers: 3
+  d_model: 512
+  dna_pad: 0
+  freeze_layer: -1
+  esm: True
+  esm_dbp: False
+  dna_attn: True
+  dna_self_attn: False
+  num_cross: 12
+  refined_conv1d: False
+  dna_protein_fea: DNA
+  seq2contact: False
+  esm_model: esm2
+  segment_embedding: True
+  pretrain: True
+  finetune: True
+  align_features: False
+  use_hyena: False
+  classification: True
+  use_protein_len: 512
+  use_conv_finetune: False
+  binder_class: False
+  finetune_attn: True
+  # ESM checkpoint path (relative to project root)
+  esm_path: ./checkpoints/esm
+
+# Sequence padding configuration
+padding:
+  dna_len: 41
+  protein_len: 512
+
+# Training configuration
+train:
+  batch_size: 128
+
+# Validation configuration
+valid:
+  batch_size: 128
+
+# Test configuration
+test:
+  batch_size: 128
