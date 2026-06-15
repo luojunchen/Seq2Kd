@@ -28,7 +28,7 @@ Seq2Kd is a deep learning model for predicting protein-DNA binding affinities ($
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/Seq2Kd.git
+git clone https://github.com/luojunchen/Seq2Kd.git
 cd Seq2Kd
 ```
 
