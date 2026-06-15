@@ -14,7 +14,6 @@ Seq2Kd is a deep learning model for predicting protein-DNA binding affinities ($
 - [Configuration](#configuration)
 - [Model Checkpoints](#model-checkpoints)
 - [Dependencies](#dependencies)
-- [Citation](#citation)
 - [License](#license)
 
 ## Features
@@ -199,14 +198,6 @@ This project uses ESM2 (Evolutionary Scale Modeling) for protein sequence embedd
 - Model used: `esm2_t33_650M_UR50D` (650M parameters)
 - Output dimension: 1280
 - GitHub: https://github.com/facebookresearch/esm
-
-## Citation
-
-If you use Seq2Kd in your research, please cite:
-
-```bibtex
-[Add citation information]
-```
 
 ## License
 
